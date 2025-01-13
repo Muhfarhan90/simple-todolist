@@ -55,7 +55,7 @@ export default function Home() {
         </button>
       </div>
 
-      <ul className="bg-blue-400 text-white p-8 rounded-lg flex flex-col gap-4 w-full">
+      <ul className="bg-blue-400 text-white p-8 rounded-lg flex flex-col gap-4 w-full overflow-auto">
         {todos.length === 0 ? (
           <li className="text-xl font-semibold p-4 bg-purple-600 rounded-lg">
             Belum ada tugas yang ditambahkan
