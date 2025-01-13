@@ -27,11 +27,11 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="max-w-[768px] mx-auto border-2 border-pink-500 h-screen px-16 py-8 bg-pink-300">
+    <div className="max-w-[768px] mx-auto border-2 border-pink-500 h-screen px-4 sm:px-16 py-8 bg-pink-300 flex flex-col items-center">
       <div>
-        <h1 className="text-4xl font-bold mb-8">Todo List</h1>
+        <h1 className="text-4xl font-bold mb-8">Simple Todo List</h1>
       </div>
-      <div className="mb-8">
+      <div className="mb-8 flex flex-wrap gap-8">
         <input
           type="text"
           value={todo}
@@ -48,13 +48,13 @@ export default function Home() {
         />
         <button
           onClick={addTodo}
-          className="bg-green-400 py-2 px-6 rounded-lg hover:bg-green-500 font-semibold ml-8 border-2 border-black"
+          className="bg-green-400 py-2 px-6 rounded-lg hover:bg-green-500 font-semibold border-2 border-black"
         >
           Tambah
         </button>
       </div>
 
-      <ul className="bg-blue-400 text-white p-8 rounded-lg flex flex-col gap-4">
+      <ul className="bg-blue-400 text-white p-8 rounded-lg flex flex-col gap-4 w-full">
         {todos.length === 0 ? (
           <li className="text-xl font-semibold p-4 bg-purple-600 rounded-lg">
             Belum ada tugas yang ditambahkan
@@ -64,7 +64,7 @@ export default function Home() {
             return (
               <li
                 key={index}
-                className="text-xl font-semibold p-4 bg-purple-600 rounded-lg flex items-center justify-between"
+                className="text-lg sm:text-xl font-semibold p-4 bg-purple-600 rounded-lg flex items-center justify-between"
               >
                 <span>{t}</span>
                 <button
