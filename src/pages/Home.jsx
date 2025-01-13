@@ -41,6 +41,7 @@ export default function Home() {
           onKeyDown={(e) => {
             if (e.key === "Enter") {
               addTodo();
+              setTodo("");
             }
           }}
           placeholder="tambahkan todo"
